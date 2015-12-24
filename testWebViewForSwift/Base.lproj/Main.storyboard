@@ -1,25 +1,91 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="testWebViewForSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j3P-gQ-uFC">
+                                <rect key="frame" x="0.0" y="20" width="320" height="494"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="gf5-5e-KAL"/>
+                                    <constraint firstAttribute="height" constant="494" id="mlo-rL-j2C"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gf5-5e-KAL"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="idI-p5-ghj"/>
+                                </connections>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CNj-MA-PlB">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="rewind" id="hCs-E2-3BO">
+                                        <connections>
+                                            <action selector="goBack" destination="j3P-gQ-uFC" id="0QF-Dt-Aax"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="fastForward" id="O45-Hl-5L6">
+                                        <connections>
+                                            <action selector="goForward" destination="j3P-gQ-uFC" id="cIh-bS-5xz"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="9sB-vd-PXr"/>
+                                    <barButtonItem systemItem="refresh" id="YKT-5A-5s7">
+                                        <connections>
+                                            <action selector="reload" destination="j3P-gQ-uFC" id="c1c-rF-332"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="stop" id="9FH-L9-zRB"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="j3P-gQ-uFC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6eh-aj-GsX"/>
+                            <constraint firstAttribute="trailing" secondItem="j3P-gQ-uFC" secondAttribute="trailing" id="80e-r7-LTg"/>
+                            <constraint firstItem="CNj-MA-PlB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="AYX-xz-J7B"/>
+                            <constraint firstItem="j3P-gQ-uFC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="LcO-0M-qa9"/>
+                            <constraint firstItem="CNj-MA-PlB" firstAttribute="leading" secondItem="j3P-gQ-uFC" secondAttribute="leading" id="TPx-nV-IKW"/>
+                            <constraint firstItem="j3P-gQ-uFC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="V38-ig-dJz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="j3P-gQ-uFC" secondAttribute="bottom" constant="54" id="alR-19-kRF"/>
+                            <constraint firstItem="CNj-MA-PlB" firstAttribute="trailing" secondItem="j3P-gQ-uFC" secondAttribute="trailing" id="gDj-vC-smw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="j3P-gQ-uFC" secondAttribute="trailing" id="skE-Y1-Qzq"/>
+                            <constraint firstItem="CNj-MA-PlB" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="yyV-HT-Pnb"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6eh-aj-GsX"/>
+                                <exclude reference="skE-Y1-Qzq"/>
+                                <exclude reference="AYX-xz-J7B"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="webview" destination="j3P-gQ-uFC" id="pMO-5k-mka"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="272" y="338"/>
         </scene>
     </scenes>
 </document>

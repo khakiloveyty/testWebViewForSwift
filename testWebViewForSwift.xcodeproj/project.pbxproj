@@ -15,6 +15,7 @@
 		DA43FCB31C2B6B7A0009F9E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA43FCB11C2B6B7A0009F9E8 /* LaunchScreen.storyboard */; };
 		DA43FCBE1C2B6B7A0009F9E8 /* testWebViewForSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA43FCBD1C2B6B7A0009F9E8 /* testWebViewForSwiftTests.swift */; };
 		DA43FCC91C2B6B7A0009F9E8 /* testWebViewForSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA43FCC81C2B6B7A0009F9E8 /* testWebViewForSwiftUITests.swift */; };
+		DA43FCD71C2B7FBE0009F9E8 /* webview.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA43FCD61C2B7FBE0009F9E8 /* webview.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		DA43FCC41C2B6B7A0009F9E8 /* testWebViewForSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testWebViewForSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA43FCC81C2B6B7A0009F9E8 /* testWebViewForSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testWebViewForSwiftUITests.swift; sourceTree = "<group>"; };
 		DA43FCCA1C2B6B7A0009F9E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA43FCD61C2B7FBE0009F9E8 /* webview.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = webview.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		DA43FCA41C2B6B7A0009F9E8 /* testWebViewForSwift */ = {
 			isa = PBXGroup;
 			children = (
+				DA43FCD61C2B7FBE0009F9E8 /* webview.gif */,
 				DA43FCA51C2B6B7A0009F9E8 /* AppDelegate.swift */,
 				DA43FCA71C2B6B7A0009F9E8 /* ViewController.swift */,
 				DA43FCA91C2B6B7A0009F9E8 /* Main.storyboard */,
@@ -235,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA43FCD71C2B7FBE0009F9E8 /* webview.gif in Resources */,
 				DA43FCB31C2B6B7A0009F9E8 /* LaunchScreen.storyboard in Resources */,
 				DA43FCB01C2B6B7A0009F9E8 /* Assets.xcassets in Resources */,
 				DA43FCAB1C2B6B7A0009F9E8 /* Main.storyboard in Resources */,
@@ -407,6 +411,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = testWebViewForSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = www.yunzhidata.com.testWebViewForSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -418,6 +423,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = testWebViewForSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = www.yunzhidata.com.testWebViewForSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -491,6 +497,7 @@
 				DA43FCCF1C2B6B7A0009F9E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA43FCD01C2B6B7A0009F9E8 /* Build configuration list for PBXNativeTarget "testWebViewForSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +506,7 @@
 				DA43FCD21C2B6B7A0009F9E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA43FCD31C2B6B7A0009F9E8 /* Build configuration list for PBXNativeTarget "testWebViewForSwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +515,7 @@
 				DA43FCD51C2B6B7A0009F9E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
